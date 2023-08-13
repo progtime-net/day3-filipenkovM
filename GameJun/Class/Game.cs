@@ -12,8 +12,8 @@ namespace GameJun.Class
         public override void SelectPlayers()
         {
             Random random = new Random();
-            int rand = random.Next(0, 3);
-            Console.WriteLine("player 2 выберете персонажа: Human, Chert, Ubuntu");
+            int rand = random.Next(0, 4);
+            Console.WriteLine("player 2 выберете персонажа: Human, Chert, Ubuntu, Arch");
             string input = Console.ReadLine();
             if (input == "Human")
             {
@@ -26,6 +26,10 @@ namespace GameJun.Class
             else if (input == "Ubuntu")
             {
                 player2 = new Ubuntu();
+            }
+            else if (input == "Arch")
+            {
+                player2 = new Arch();
             }
             else
             {
@@ -42,10 +46,14 @@ namespace GameJun.Class
                 {
                     player2 = new Ubuntu();
                 }
+                else if (rand == 3)
+                {
+                    player2 = new Arch();
+                }
             }
 
-            rand = random.Next(0, 3);
-            Console.WriteLine("player 1 выберете персонажа: Human, Chert, Ubuntu");
+            rand = random.Next(0, 4);
+            Console.WriteLine("player 1 выберете персонажа: Human, Chert, Ubuntu, Arch");
             input = Console.ReadLine();
             if (input == "Human")
             {
@@ -58,6 +66,10 @@ namespace GameJun.Class
             else if (input == "Ubuntu")
             {
                 player1 = new Ubuntu();
+            }
+            else if (input == "Arch")
+            {
+                player1 = new Arch();
             }
             else
             {
@@ -73,6 +85,10 @@ namespace GameJun.Class
                 else if (rand == 2)
                 {
                     player1 = new Ubuntu();
+                }
+                else if (rand == 3)
+                {
+                    player1 = new Arch();
                 }
             }
         }
