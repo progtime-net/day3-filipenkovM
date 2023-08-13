@@ -15,12 +15,12 @@ namespace GameJun.Class
             Random random = new Random();
             this.health = random.Next(7, 13);
             this.defense = random.Next(-2, 50);
-            this.damage = random.Next(1, 5);
         }
 
         public override void Attack(AbstractCharacter other)
         {
-            other.Damage(damage);
+            Random random = new Random();
+            other.Damage(Random.Next(1, 5));
         }
 
         public override void Damage(int amount)
